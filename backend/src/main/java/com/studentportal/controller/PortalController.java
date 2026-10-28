@@ -11,7 +11,10 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "https://student-project-portal-eta.vercel.app"
+})
 public class PortalController {
     private final ProjectRepository projects; private final StudentRepository students; private final MentorRepository mentors;
     private final JoinRequestRepository requests; private final MilestoneRepository milestones; private final TeamRepository teams;
